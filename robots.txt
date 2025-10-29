@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mceingenierias.netlify.app/sitemap.xml
+Sitemap: https://mceingenieria.github.io/sitemap.xml
