@@ -1,284 +1,1396 @@
 <!DOCTYPE html>
 <html lang="es">
+
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
 <head>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- 🧭 SEO -->
+  <!-- SEO -->
   <title>MCE Ingeniería | Mecánica, Civil y Eléctrica</title>
-  <meta name="description" content="MCE Ingeniería desarrolla proyectos en ingeniería mecánica, civil y eléctrica. Diseño, construcción, mantenimiento y soluciones integrales con calidad y sostenibilidad.">
-  <meta name="keywords" content="MCE Ingeniería, ingeniería civil, ingeniería mecánica, ingeniería eléctrica, proyectos, construcción, mantenimiento, Villavicencio, Acacías, Colombia">
+
+  <meta name="description"
+    content="MCE Ingeniería desarrolla proyectos en ingeniería mecánica, civil y eléctrica. Diseño, construcción, mantenimiento y soluciones integrales con calidad y sostenibilidad.">
+
+  <meta name="keywords"
+    content="MCE Ingeniería, ingeniería civil, ingeniería mecánica, ingeniería eléctrica, proyectos, construcción, mantenimiento, Villavicencio, Acacías, Colombia">
+
   <meta name="author" content="MCE Ingeniería">
 
-  <!-- 🌐 Favicon -->
-  <link rel="icon" type="image/png" href="LOGO-MCE.jpg">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="LOGO-MCE.png">
+
+
 
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family:"Segoe UI",Roboto,Arial,sans-serif;
-      color:#222;
-      background:#f4f6f8;
-      -webkit-font-smoothing:antialiased;
-      scroll-behavior:smooth;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* HEADER */
-    header{
-      position:fixed;top:0;left:0;right:0;
-      background:#002b80;color:#fff;z-index:1200;
-      box-shadow:0 4px 8px rgba(0,0,0,0.08);
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
     }
-    .header-inner{
-      max-width:1200px;margin:0 auto;
-      padding:12px 20px;
-      display:flex;align-items:center;justify-content:space-between;gap:16px;
-    }
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:90px;width:auto;border-radius:8px}
-    .brand .name{font-weight:800;font-size:20px;color:#ffffff;letter-spacing:0.6px}
 
-    nav.desktop{display:flex;gap:18px;align-items:center}
-    nav.desktop a{color:#fff;text-decoration:none;font-weight:600;padding:8px 6px;transition:color .18s ease}
-    nav.desktop a:hover{color:#ffb347}
+  body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #222;
+  background: #f4f6f8;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}  
 
-    /* MOBILE MENU */
-    .menu-toggle{display:none;background:transparent;border:0;color:#fff;cursor:pointer}
-    .menu-toggle svg{width:28px;height:28px}
-    @media (max-width:820px){
-      nav.desktop{display:none}
-      .menu-toggle{display:inline-flex}
-      .brand .name{font-size:18px}
-    }
-    .mobile-panel{display:none;background:#002b80;color:white}
-    .mobile-panel.show{display:block}
-    .mobile-panel a{
-      display:block;padding:12px 18px;
-      border-top:1px solid rgba(255,255,255,0.04);
-      color:#fff;text-decoration:none
-    }
-    .mobile-panel a:hover{background:rgba(255,255,255,0.02);color:#ffb347}
 
-    /* HERO / PORTADA */
-    .hero{
-      margin-top:96px;
-      height:calc(100vh - 96px);
-      background-image:url('portada.jpg');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:30px;
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #002b80;
+      color: #fff;
+      z-index: 1200;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
     }
-    .hero-box{
-      background:rgba(255,255,255,0.38);
-      color:#000;
-      padding:28px 40px;
-      border-radius:12px;
-      max-width:920px;
-      width:100%;
-      box-shadow:0 10px 30px rgba(0,0,0,0.18);
-      transition:transform .3s ease, box-shadow .3s ease, background .3s ease;
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
-    .hero-box:hover{
-      background:rgba(255,255,255,0.55);
-      transform:translateY(-5px);
-      box-shadow:0 20px 40px rgba(0,0,0,0.25);
-      animation:glow 1.5s ease-in-out infinite alternate;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
+
+    .brand img {
+      height: 90px;
+      width: auto;
+      border-radius: 8px;
+    }
+
+    .brand .name {
+      font-weight: 800;
+      font-size: 20px;
+      color: #ffffff;
+      letter-spacing: 0.6px;
+    }
+
+    nav.desktop {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    nav.desktop a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 6px;
+      transition: color .18s ease;
+    }
+
+    nav.desktop a:hover {
+      color: #ffb347;
+    }
+
+
+    /* =========================
+       MENU MÓVIL
+    ========================== */
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .menu-toggle svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    @media (max-width: 820px) {
+
+      nav.desktop {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .brand .name {
+        font-size: 18px;
+      }
+    }
+
+    .mobile-panel {
+      display: none;
+      background: #002b80;
+      color: white;
+    }
+
+    .mobile-panel.show {
+      display: block;
+    }
+
+    .mobile-panel a {
+      display: block;
+      padding: 12px 18px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .mobile-panel a:hover {
+      background: rgba(255,255,255,0.02);
+      color: #ffb347;
+    }
+
+
+    /* =========================
+       PORTADA
+    ========================== */
+
+    .hero {
+      margin-top: 96px;
+      height: calc(100vh - 96px);
+      background-image: url('portada.jpg');
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      padding: 30px;
+    }
+
+    .hero-box {
+      background: rgba(255,255,255,0.38);
+      color: #000;
+
+      padding: 28px 40px;
+
+      border-radius: 12px;
+
+      max-width: 920px;
+      width: 100%;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+    }
+
+    .hero-box:hover {
+      background: rgba(255,255,255,0.55);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
     @keyframes glow {
-      0% { box-shadow:0 0 15px rgba(0,0,0,0.2); }
-      100% { box-shadow:0 0 35px rgba(255,255,255,0.6); }
-    }
-    .hero-box h1{font-size:2.6rem;font-weight:800;margin-bottom:10px}
-    .hero-box h2{font-size:1.6rem;margin-bottom:10px;font-weight:700}
-    .hero-box p{font-family:Georgia,"Times New Roman",serif;font-style:italic;opacity:0.95}
 
-    /* SECCIONES */
-    section{scroll-margin-top:110px}
-    .section{max-width:1200px;margin:0 auto;padding:56px 20px}
-    .section h2{color:#002b80;text-align:center;font-size:1.9rem;margin-bottom:26px}
-    .section p{line-height:1.6;color:#333}
+      0% {
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      }
 
-    /* QUIENES SOMOS */
-    #quienes{background:#ffffff;padding-top:56px;padding-bottom:56px}
+      100% {
+        box-shadow: 0 0 35px rgba(255,255,255,0.6);
+      }
 
-    /* MISION & VISION */
-    #mision{background:#f1f4f7;padding-top:56px;padding-bottom:56px}
-    .mv-cards{display:flex;gap:22px;justify-content:center;align-items:stretch;flex-wrap:wrap}
-    .card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 8px 22px rgba(9,30,66,0.06);min-width:300px;max-width:45%}
-    .card h3{color:#1f3f82;margin-bottom:10px;font-size:1.15rem}
-    @media(max-width:820px){.card{max-width:100%}}
-
-    /* SERVICIOS */
-    #servicios{background:#ffffff;padding-top:56px;padding-bottom:56px}
-    .services-grid{display:flex;justify-content:center;align-items:stretch;flex-wrap:wrap;gap:24px}
-    .svc{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(9,30,66,0.06);display:flex;flex-direction:column;width:30%;min-width:300px;transition:transform .25s ease, box-shadow .25s ease}
-    .svc:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(9,30,66,0.15)}
-    .svc img{width:100%;height:200px;object-fit:cover;background:#eee}
-    .svc .svc-body{padding:18px;flex:1}
-    .svc h4{color:#0b3a80;margin-bottom:8px}
-    .svc p{color:#444;line-height:1.5;font-size:0.95rem}
-    @media(max-width:1100px){.svc{width:45%}}
-    @media(max-width:700px){.svc{width:100%}}
-
-    /* CONTACTO */
-    #contacto{background:#f1f4f7;padding-top:56px;padding-bottom:56px}
-    .form-wrap{display:flex;justify-content:center;padding:20px 0}
-    form{width:100%;max-width:520px;background:#fff;padding:24px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.06);position:relative}
-    .field{margin-bottom:14px}
-    input,textarea{width:100%;padding:12px;border:1px solid #d3d7db;border-radius:8px;font-size:1rem}
-    button{background:#002b80;color:#fff;border:0;padding:12px;border-radius:8px;font-weight:700;width:100%}
-    button:hover{background:#001f5c;transition:all .2s}
-    .success-msg{
-      display:none;
-      margin-top:14px;
-      padding:12px;
-      border-radius:8px;
-      background:#e6f4ea;
-      color:#064e3b;
-      font-weight:700;
-      text-align:center;
     }
 
-    /* WHATSAPP */
-    .whatsapp-btn{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;padding:12px 18px;border-radius:999px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 20px rgba(0,0,0,0.18);text-decoration:none;z-index:1400}
-    .whatsapp-btn img{width:20px;height:20px}
+    .hero-box h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
 
-    /* FOOTER */
-    footer{background:#002b80;color:#fff;text-align:center;padding:16px 12px}
-    footer .line1{font-weight:700}
-    footer .line2{font-size:0.95rem;opacity:0.95;margin-top:6px}
+    .hero-box h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .hero-box p {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      opacity: 0.95;
+    }
+
+
+    /* =========================
+       SECCIONES
+    ========================== */
+
+    section {
+      scroll-margin-top: 130px;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+
+   .section h2 {
+     color: #002b80;
+     text-align: center;
+     font-size: 2.1rem;
+     font-weight: 800;
+     margin-bottom: 12px;
+     text-transform: uppercase;
+} 
+
+    .section p {
+      line-height: 1.6;
+      color: #333;
+    }
+
+
+    /* =========================
+       QUIÉNES SOMOS
+    ========================== */
+
+    #quienes {
+  background: linear-gradient(
+    180deg,
+    #f8fbff 0%,
+    #eef3f9 100%
+  );
+}
+
+    .quienes-intro {
+      max-width: 1050px;
+      margin: 0 auto 28px auto;
+      text-align: justify;
+    }
+
+    .quienes-intro p {
+      margin-bottom: 16px;
+    }
+
+    .quienes-grid{
+    max-width:900px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    align-items:stretch;
+}
+
+.quienes-card{
+  background:#fff;
+
+  border:1px solid #e4eaf2;
+  border-left:4px solid transparent;
+
+  border-radius:16px;
+
+  padding:22px;
+
+  box-shadow:0 10px 30px rgba(0,43,128,.08);
+
+  transition:all .3s ease;
+  display:flex;
+
+  flex-direction:column;
+
+  height:100%;
+}
+
+.quienes-card:hover{
+  border-left: 8px solid #003399;
+  transform:translateY(-8px);
+
+  box-shadow:
+    0 18px 40px rgba(0,43,128,.15);
+}
+
+.quienes-card h3 {
+  color: #002b80;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  text-transform: none;
+}
+
+.quienes-card h3 i{
+    color:#002b80;
+    margin-right:10px;
+    font-size:1.1rem;
+    transition:all .3s ease;
+}
+
+.quienes-card:hover h3 i{
+    color:#ffb347;
+    transition:.3s;
+}
+
+.quienes-card p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.quienes-card ul,
+.quienes-card ol {
+  margin: 8px 0 0 18px;
+  line-height: 1.5;
+}
+
+.quienes-card li {
+  margin-bottom: 3px;
+  font-size: 0.83rem;
+  line-height: 1.4;
+}
+
+
+    .quienes-final {
+      max-width: 750px;
+      margin: 40px auto;
+
+      padding: 30px;
+
+      background: #ffffff;
+      border: 2px solid #d9e4f7;
+      border-radius: 18px;
+
+      text-align: center;
+
+      box-shadow: 0 10px 25px rgba(0,43,120,0.08);
+    }
+
+    .quienes-final p {
+     font-size: 1.15rem;
+     font-weight: 600;
+     color: #002b80;
+     line-height: 1.7;
+}
+
+    @media (max-width: 820px) {
+
+      .quienes-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quienes-intro {
+        text-align: left;
+      }
+
+      .quienes-card p {
+        text-align: left;
+      }
+
+    }
+
+
+    /* =========================
+       MISIÓN & VISIÓN
+    ========================== */
+
+    #mision {
+      background: #f1f4f7;
+      padding-top: 100px;
+      padding-bottom: 450px;
+    }
+
+    .mv-cards {
+      display: flex;
+      gap: 22px;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 8px 22px rgba(9,30,66,0.06);
+      min-width: 300px;
+      max-width: 45%;
+    }
+
+    .card h3 {
+      color: #1f3f82;
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    @media (max-width: 820px) {
+
+      .card {
+        max-width: 100%;
+      }
+
+    }
+
+
+
+    /* =========================
+       SERVICIOS
+    ========================== */
+
+    #servicios {
+      background: #ffffff;
+      padding-top: 100px;
+      padding-bottom: 450px;
+    }
+
+    .services-grid {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .svc {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+
+      box-shadow: 0 8px 22px rgba(9,30,66,0.06);
+
+      display: flex;
+      flex-direction: column;
+
+      width: 30%;
+      min-width: 300px;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .svc:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 28px rgba(9,30,66,0.15);
+    }
+
+    .svc img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #eee;
+      display: block;
+    }
+
+    .svc .svc-body {
+      padding: 18px;
+      flex: 1;
+    }
+
+    .svc h4 {
+      color: #0b3a80;
+      margin-bottom: 8px;
+    }
+
+    .svc p {
+      color: #444;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1100px) {
+
+      .svc {
+        width: 45%;
+      }
+
+    }
+
+    @media (max-width: 700px) {
+
+      .svc {
+        width: 100%;
+      }
+
+    }
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+#contacto {
+  background: #f1f4f7;
+  padding-top: 56px;
+  padding-bottom: 64px;
+}
+
+#contacto h2 {
+  color: #002b80;
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 30px;
+}
+
+.form-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#contactForm {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d3d7db;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: #002b80;
+}
+
+#contactForm textarea {
+  resize: vertical;
+}
+
+#contactForm button {
+  background: #002b80;
+  color: #fff;
+  border: 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background: #001f5c;
+  transition: all .2s;
+}
+
+.success-msg {
+  display: none;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #e6f4ea;
+  color: #064e3b;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  text-decoration: none;
+  z-index: 1400;
+  font-weight: 700;
+}
+
+.whatsapp-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  transition: all .2s ease;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #063b91;
+  color: #fff;
+  text-align: center;
+  padding: 28px 20px !important;
+  margin: 0 !important;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  box-sizing: border-box;
+}
+
+footer .line1 {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+footer .line2 {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =========================
+   VISTA INDIVIDUAL DE SECCIONES
+========================= */
+
+body.vista-mision #inicio,
+body.vista-mision #quienes,
+body.vista-mision #servicios,
+body.vista-mision #contacto {
+  display: none;
+}
+
+body.vista-mision #mision {
+  display: block;
+  min-height: calc(100vh - 150px);
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+body.vista-mision footer {
+  display: block;
+}
+
+body.vista-quienes #inicio,
+body.vista-quienes #mision,
+body.vista-quienes #servicios,
+body.vista-quienes #contacto {
+  display: none;
+}
+
+body.vista-quienes #quienes {
+  display: block;
+  min-height: calc(100vh - 150px);
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+body.vista-quienes footer {
+  display: block;
+}
+
+body.vista-servicios #inicio,
+body.vista-servicios #quienes,
+body.vista-servicios #mision,
+body.vista-servicios #contacto {
+  display: none;
+}
+
+body.vista-servicios #servicios {
+  display: block;
+  min-height: calc(100vh - 150px);
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+body.vista-servicios footer {
+  display: block;
+}
+
+body.vista-contacto #inicio,
+body.vista-contacto #quienes,
+body.vista-contacto #mision,
+body.vista-contacto #servicios {
+  display: none;
+}
+
+body.vista-contacto #contacto {
+  display: block;
+  min-height: calc(100vh - 150px);
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+body.vista-contacto footer {
+  display: block;
+}
+
+
+/* Footer pegado al final de cada sección */
+body.vista-mision,
+body.vista-quienes,
+body.vista-servicios,
+body.vista-contacto {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.vista-mision main,
+body.vista-quienes main,
+body.vista-servicios main,
+body.vista-contacto main {
+  flex: 1;
+}
+
+body.vista-mision footer,
+body.vista-quienes footer,
+body.vista-servicios footer,
+body.vista-contacto footer {
+  margin-top: auto !important;
+}
+
+.footer-social {
+  margin-top: 14px;
+}
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.footer-social {
+  margin-top: 16px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  color: #fff;
+
+  padding: 10px 18px;
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.20);
+
+  transition: all .25s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.30);
+}
+
+.footer-social .instagram-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.comilla{
+    font-size: 60px;
+    color: #002b80;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.titulo-linea{
+  width:100px;
+  height:4px;
+  margin:10px auto 35px;
+
+  background:linear-gradient(
+    90deg,
+    #ffb347,
+    #002b80
+  );
+
+  border-radius:10px;
+}
+
+
   </style>
+
 </head>
+
+
+<script>
+
+function mostrarSeccion(seccion) {
+
+  document.body.classList.remove("vista-mision");
+  document.body.classList.remove("vista-quienes");
+  document.body.classList.remove("vista-servicios");
+  document.body.classList.remove("vista-contacto");
+
+  if (seccion === "mision") {
+    document.body.classList.add("vista-mision");
+  }
+
+  if (seccion === "quienes") {
+    document.body.classList.add("vista-quienes");
+  }
+
+  if (seccion === "servicios") {
+    document.body.classList.add("vista-servicios");
+  }
+
+  if (seccion === "contacto") {
+    document.body.classList.add("vista-contacto");
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+</script>
+
+</script>
 
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header>
+
     <div class="header-inner">
+
       <div class="brand">
-        <img src="LOGO-MCE.jpg" alt="Logo MCE">
-        <div class="name">MCE INGENIERÍA</div>
+
+        <img src="LOGO-MCE.png" alt="Logo MCE">
+
+        <div class="name">
+          MCE INGENIERÍA
+        </div>
+
       </div>
+
 
       <nav class="desktop">
-        <a href="#inicio">Inicio</a>
-        <a href="#quienes">Quiénes Somos</a>
-        <a href="#mision">Misión & Visión</a>
-        <a href="#servicios">Servicios</a>
-        <a href="galeria.html">Galería de Proyectos</a>
-        <a href="#contacto">Contáctanos</a>
+
+        <a href="#" onclick="mostrarSeccion('inicio'); return false;">
+            Inicio 
+        </a>
+
+        <a href="#" onclick="mostrarSeccion('quienes'); return false;">
+           Quiénes Somos
+        </a>
+
+        <a href="#" onclick="mostrarSeccion('mision'); return false;">
+           Misión & Visión
+        </a>
+
+        <a href="#" onclick="mostrarSeccion('servicios'); return false;">
+           Servicios
+        </a>
+
+        <a href="galeria.html">
+          Galería de Proyectos
+        </a>
+
+        <a href="#" onclick="mostrarSeccion('contacto'); return false;">
+           Contáctanos
+        </a>
+
       </nav>
 
+
       <button class="menu-toggle" id="menuToggle">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
-          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <svg viewBox="0 0 24 24"
+          fill="none"
+          stroke="#fff"
+          stroke-width="2">
+
+          <path
+            d="M4 6h16M4 12h16M4 18h16"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
         </svg>
+
       </button>
+
     </div>
+
 
     <div id="mobilePanel" class="mobile-panel">
-      <a href="#inicio" onclick="toggleMobile(false)">Inicio</a>
-      <a href="#quienes" onclick="toggleMobile(false)">Quiénes Somos</a>
-      <a href="#mision" onclick="toggleMobile(false)">Misión & Visión</a>
-      <a href="#servicios" onclick="toggleMobile(false)">Servicios</a>
-      <a href="galeria.html" onclick="toggleMobile(false)">Galería de Proyectos</a>
-      <a href="#contacto" onclick="toggleMobile(false)">Contáctanos</a>
+
+      <a href="#" onclick="mostrarSeccion('inicio'); toggleMobile(false); return false;">
+         Inicio
+      </a>
+
+      <a href="#" onclick="mostrarSeccion('quienes'); toggleMobile(false); return false;">
+        Quiénes Somos
+      </a>
+
+      <a href="#" onclick="mostrarSeccion('mision'); toggleMobile(false); return false;">
+        Misión & Visión
+      </a>
+
+      <a href="#" onclick="mostrarSeccion('servicios'); toggleMobile(false); return false;">
+        Servicios
+      </a>
+
+      <a href="galeria.html"
+        onclick="toggleMobile(false)">
+        Galería de Proyectos
+      </a>
+
+      <a href="#" onclick="mostrarSeccion('contacto'); toggleMobile(false); return false;">
+         Contáctanos
+      </a>
+
     </div>
+
   </header>
 
-  <!-- HERO -->
+
+  <!-- =========================
+       CONTENIDO PRINCIPAL
+  ========================== -->
+
   <main>
+
+
+    <!-- =========================
+         INICIO
+    ========================== -->
+
     <section id="inicio" class="hero">
+
       <div class="hero-box">
-        <h1>Construyendo el futuro a través de proyectos de ingeniería Mecánica, Civil y Eléctrica.</h1>
-        <h2>Impulsamos el desarrollo y la sostenibilidad mediante la energía, el medio ambiente y los procesos industriales.</h2>
+
+        <h1>
+          Construyendo el futuro a través de proyectos de ingeniería Mecánica, Civil y Eléctrica.
+        </h1>
+
+        <h2>
+          Impulsamos el desarrollo y la sostenibilidad mediante la energía, el medio ambiente y los procesos industriales.
+        </h2>
+
       </div>
+
     </section>
 
-    <!-- QUIÉNES SOMOS -->
+
+    <!-- =========================
+         QUIÉNES SOMOS
+    ========================== -->
+
     <section id="quienes" class="section">
-    <h2>Quiénes somos</h2>  
-      <p>MCE INGENIERÍA es una empresa privada que surge para responder a las necesidades del sector industrial. Nos especializamos en el desarrollo de proyectos de ingeniería en las áreas mecánica, civil, eléctrica e instrumentación, ofreciendo soluciones integrales y de alta calidad.</p>
-      <p>Contamos con amplia experiencia en la fabricación de estructuras metálicas, obras de concreto, líneas de proceso, acometidas eléctricas e instalación de equipos especializados. Además, desarrollamos proyectos enfocados en diseño mediante software avalado, certificación bajo normas vigentes y ensayos con equipos especializados en metrología.</p>
-      <p>Nos destacamos por garantizar trabajos completos, eficaces y eficientes, generando resultados favorables en todas las etapas de ejecución. Algunos de nuestros proyectos más representativos incluyen:</p>
-      <ul style="margin:14px 0 14px 40px;line-height:1.6">
-        <li>Estructuras tipo plataforma para procesos con ensayos estructurales certificados.</li>
-        <li>Estructuras tipo SKID.</li>
-        <li>Cajas de inspección y tapas de halado.</li>
-        <li>Revegetalización.</li>
-        <li>Ensayos no destructivos.</li>
-        <li>Cerramientos perimetrales.</li>
-        <li>Trabajos con maquinaria amarilla.</li>
-      </ul>
-      <p>Cada iniciativa que emprendemos busca optimizar recursos, respetar el medio ambiente y asegurar la calidad, innovación y compromiso en cada proyecto que realizamos.</p>
+
+      <h2>
+        Quiénes somos
+      </h2>
+
+            <div class="titulo-linea"></div>
+            <div class="quienes-intro">
+
+        <p>
+          MCE INGENIERÍA S.A.S. es una compañía privada dedicada a proporcionar
+          soluciones integrales para los sectores industrial, comercial y público.
+          Nos especializamos en la ejecución de proyectos que abarcan las áreas
+          mecánica, civil, eléctrica e instrumentación, garantizando altos estándares
+          de calidad, eficiencia y riguroso cumplimiento normativo en cada etapa
+          del desarrollo.
+        </p>
+
+        <p>
+          Respaldamos nuestra operación mediante el uso de software y equipos
+          especializados para ensayos de precisión y procesos de certificación
+          bajo la normatividad técnica vigente, buscando entregar soluciones
+          confiables, funcionales y optimizadas.
+        </p>
+
+      </div>
+
+
+      <div class="quienes-grid">
+
+        <!-- SECTOR PRIVADO -->
+
+        <div class="quienes-card">
+
+          <h3>
+            <i class="fas fa-industry"></i>
+            Sector Privado
+          </h3>
+
+          <p>
+            Atendemos las necesidades de empresas industriales y comerciales
+            mediante soluciones orientadas a mejorar la productividad, seguridad
+            y funcionamiento de sus instalaciones.
+          </p>
+
+          <ul>
+
+            <li>
+              <strong>Estructuras metálicas y sistemas modulares:</strong>
+              fabricación, montaje y adecuación de estructuras para diferentes
+              aplicaciones industriales.
+            </li>
+
+            <li>
+              <strong>Líneas de proceso e instrumentación:</strong>
+              montaje de tuberías, líneas de fluidos, instrumentación industrial
+              y acometidas eléctricas de fuerza y control.
+            </li>
+
+            <li>
+              <strong>Mantenimiento e instalaciones especializadas:</strong>
+              montaje, mantenimiento y alineación de equipos y sistemas
+              utilizados en plantas operativas.
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- SECTOR PÚBLICO -->
+
+        <div class="quienes-card">
+
+          <h3>
+            <i class="fas fa-building-columns"></i>
+            Sector Público
+          </h3>
+
+          <p>
+            Participamos en proyectos de infraestructura y adecuación física,
+            atendiendo los requerimientos técnicos, normativos y contractuales
+            establecidos para cada proyecto.
+          </p>
+
+          <ul>
+
+            <li>
+              <strong>Obras civiles e infraestructura:</strong>
+              construcción y adecuación de obras civiles, cajas de inspección,
+              cerramientos y elementos asociados a instalaciones públicas.
+            </li>
+
+            <li>
+              <strong>Movimiento de tierras y maquinaria:</strong>
+              adecuación, nivelación y preparación de terrenos para diferentes
+              frentes de obra.
+            </li>
+
+            <li>
+              <strong>Sostenibilidad y mitigación ambiental:</strong>
+              ejecución de acciones de control de erosión, bioingeniería y
+              recuperación de áreas intervenidas.
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- CONTROL DE CALIDAD -->
+
+        <div class="quienes-card">
+
+          <h3>
+           <i class="fas fa-circle-check"></i> 
+            Control de calidad
+          </h3>
+
+          <p>
+            En cada proyecto buscamos mantener un control técnico que permita
+            verificar la calidad y confiabilidad de los trabajos realizados.
+          </p>
+
+          <ol>
+
+            <li>
+              <strong>Ensayos no destructivos (END):</strong>
+              inspección de soldaduras, medición de espesores y evaluación
+              de elementos estructurales.
+            </li>
+
+            <li>
+              <strong>Equipos de medición:</strong>
+              utilización de instrumentos adecuados para las verificaciones
+              y mediciones realizadas en campo.
+            </li>
+
+            <li>
+              <strong>Documentación técnica:</strong>
+              organización de los soportes y registros necesarios para
+              respaldar la calidad de los trabajos.
+            </li>
+
+          </ol>
+
+        </div>
+
+
+        <!-- PROPUESTA DE VALOR -->
+
+        <div class="quienes-card">
+
+          <h3>
+            <i class="fas fa-handshake"></i>
+            Nuestro compromiso
+          </h3>
+
+          <p>
+            Cada proyecto es desarrollado buscando aprovechar adecuadamente
+            los recursos disponibles, mantener criterios de seguridad y calidad,
+            incorporar herramientas tecnológicas y cumplir con los requisitos
+            técnicos establecidos.
+          </p>
+
+          <p>
+            Nuestro propósito es ofrecer soluciones de ingeniería que respondan
+            a las necesidades de nuestros clientes y contribuyan al desarrollo
+            responsable de los proyectos en los que participamos.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="quienes-final">
+
+        <div class="comilla">❝</div>
+
+        <p>
+          En MCE INGENIERÍA trabajamos con responsabilidad, compromiso técnico
+          y orientación a resultados, buscando que cada proyecto entregue
+          soluciones eficientes y confiables.
+        </p>
+
+      </div>
+
+
     </section>
 
-    <!-- MISIÓN & VISIÓN -->
+
+    <!-- =========================
+         MISIÓN & VISIÓN
+    ========================== -->
+
     <section id="mision" class="section">
-      <h2>Misión & visión</h2>
+
+      <h2 style="display:block !important; visibility:visible !important; opacity:1 !important; color:#002b80 !important; text-align:center !important; font-size:1.9rem !important; margin:0 0 26px 0 !important; line-height:1.2 !important;">
+         Misión & visión
+      </h2>
+
+      <div class="titulo-linea"></div>
       <div class="mv-cards">
+
+
         <div class="card">
-          <h3>Misión</h3>
-          <p>Ejecutamos procesos eficientes que optimizan los costos operativos y superan las expectativas de nuestros clientes. Con una cultura de mejora continua y cumplimiento normativo, buscamos satisfacer de manera constante las necesidades del mercado.</p>
+
+          <h3>
+            Misión
+          </h3>
+
+          <p>
+            Ejecutamos procesos eficientes que optimizan los costos operativos
+            y superan las expectativas de nuestros clientes. Con una cultura
+            de mejora continua y cumplimiento normativo, buscamos satisfacer
+            de manera constante las necesidades del mercado.
+          </p>
+
         </div>
+
+
         <div class="card">
-          <h3>Visión</h3>
-          <p>Para 2026, nos proyectamos como líderes nacionales en construcción de obras civiles, reconocidos por nuestra excelencia y compromiso. Promovemos desarrollo integral, sostenibilidad y cuidado del medio ambiente, garantizando calidad en cada proyecto.</p>
+
+          <h3>
+            Visión
+          </h3>
+
+          <p>
+            Para 2026, nos proyectamos como líderes nacionales en construcción
+            de obras civiles, reconocidos por nuestra excelencia y compromiso.
+            Promovemos desarrollo integral, sostenibilidad y cuidado del medio
+            ambiente, garantizando calidad en cada proyecto.
+          </p>
+
         </div>
+
+
       </div>
+
     </section>
 
-    <!-- SERVICIOS -->
+
+    <!-- =========================
+         SERVICIOS
+    ========================== -->
+
     <section id="servicios" class="section">
-      <h2>Nuestros servicios</h2>
+
+      <h2 style="display:block !important; visibility:visible !important; opacity:1 !important; color:#002b80 !important; text-align:center !important; font-size:1.9rem !important; margin:0 0 26px 0 !important; line-height:1.2 !important;">
+        Nuestros servicios
+      </h2>
+
+      <div class="titulo-linea"></div>
       <div class="services-grid">
+
+
         <article class="svc">
-          <img src="mecanica.jpeg" alt="Ingeniería mecánica">
+
+          <img
+            src="mecanica.jpeg"
+            alt="Ingeniería mecánica">
+
           <div class="svc-body">
-            <h4>Ingeniería mecánica</h4>
-            <p>Diseño, montaje y mantenimiento de estructuras metálicas, tuberías industriales y componentes mecánicos de alta precisión.</p>
+
+            <h4>
+              Ingeniería mecánica
+            </h4>
+
+            <p>
+              Diseño, montaje y mantenimiento de estructuras metálicas,
+              tuberías industriales y componentes mecánicos de alta precisión.
+            </p>
+
           </div>
+
         </article>
+
+
         <article class="svc">
-          <img src="civil.jpg" alt="Ingeniería civil">
+
+          <img
+            src="civil.jpg"
+            alt="Ingeniería civil">
+
           <div class="svc-body">
-            <h4>Ingeniería civil</h4>
-            <p>Construcción y mantenimiento de edificaciones, obras civiles, cimentaciones y estructuras con altos estándares de calidad.</p>
+
+            <h4>
+              Ingeniería civil
+            </h4>
+
+            <p>
+              Construcción y mantenimiento de edificaciones, obras civiles,
+              cimentaciones y estructuras con altos estándares de calidad.
+            </p>
+
           </div>
+
         </article>
+
+
         <article class="svc">
-          <img src="electrica.jpg" alt="Ingeniería eléctrica">
+
+          <img
+            src="electrica.jpg"
+            alt="Ingeniería eléctrica">
+
           <div class="svc-body">
-            <h4>Ingeniería eléctrica</h4>
-            <p>Instalaciones eléctricas industriales y residenciales, automatización, mantenimiento y eficiencia energética.</p>
+
+            <h4>
+              Ingeniería eléctrica
+            </h4>
+
+            <p>
+              Instalaciones eléctricas industriales y residenciales,
+              automatización, mantenimiento y eficiencia energética.
+            </p>
+
           </div>
+
         </article>
+
+
       </div>
+
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto" class="section">
-      <h2>Contáctanos</h2>
+      <h2 style="display:block !important; visibility:visible !important; opacity:1 !important; color:#002b80 !important; text-align:center !important; font-size:1.9rem !important; margin:0 0 30px 0 !important; line-height:1.2 !important;">
+         Contáctanos
+      </h2>
+
+      <div class="titulo-linea"></div>
       <div class="form-wrap">
-        <form id="contactForm" action="https://formspree.io/f/xanlqdra" method="POST">
+        <form id="contactForm"
+              action="https://formspree.io/f/xanlqdra"
+              method="POST">
+
           <div class="field">
-            <label>Nombre</label>
-            <input type="text" name="nombre" required>
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Escribe tu nombre"
+              required>
           </div>
 
           <div class="field">
-            <label>Correo</label>
-            <input type="email" name="_replyto" required>
+            <label for="correo">Correo</label>
+            <input
+              type="email"
+              id="correo"
+              name="_replyto"
+              placeholder="correo@ejemplo.com"
+              required>
           </div>
 
           <div class="field">
-            <label>Mensaje</label>
-            <textarea name="mensaje" rows="5" required></textarea>
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              placeholder="Escribe tu mensaje"
+              required></textarea>
           </div>
 
           <button type="submit">Enviar mensaje</button>
@@ -286,6 +1398,7 @@
           <div class="success-msg" id="successMsg">
             ✅ Gracias por contactarnos. Tu mensaje fue enviado correctamente.
           </div>
+
         </form>
       </div>
 
@@ -295,25 +1408,36 @@
 
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
+
           const data = new FormData(form);
 
           const response = await fetch(form.action, {
             method: "POST",
             body: data,
-            headers: { 'Accept': 'application/json' }
+            headers: {
+              "Accept": "application/json"
+            }
           });
 
           if (response.ok) {
             successMsg.style.display = "block";
             form.reset();
-            setTimeout(() => { successMsg.style.display = "none"; }, 4000);
+
+            setTimeout(() => {
+              successMsg.style.display = "none";
+            }, 4000);
+
           } else {
             alert("Hubo un error al enviar el mensaje. Intenta nuevamente.");
           }
         });
       </script>
+
     </section>
   </main>
+      
+
+
 
   <!-- WHATSAPP -->
   <a class="whatsapp-btn" href="https://wa.me/573222800306" target="_blank">
@@ -321,10 +1445,40 @@
   </a>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="line1">© 2025 MCE INGENIERÍA | Todos los derechos reservados</div>
-    <div class="line2">EDS Terpel km 2 vía Acacías – Villavicencio | mce.ingenierias@gmail.com | Tel: 3222800306 – 3176678311</div>
-  </footer>
+  
+<footer>
+  <div class="footer-content">
+
+    <div class="footer-line1">
+      © 2025 MCE INGENIERÍA | Todos los derechos reservados
+    </div>
+
+    <div class="footer-line2">
+      Vereda la Cecilita Finca Villa Sandra – Acacias |
+      mce.ingenierias@gmail.com |
+      Tel: 3176678311 – 3222800306
+    </div>
+
+  <div class="footer-social">
+
+  <a href="https://www.instagram.com/mceingenieria/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Instagram MCE Ingeniería">
+
+    <img
+      class="instagram-icon"
+      src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+      alt="Instagram">
+
+    Síguenos en Instagram
+
+  </a>
+
+</div>  
+
+  </div>
+</footer>  
 
   <script>
     const toggleBtn = document.getElementById('menuToggle');
@@ -335,16 +1489,10 @@
     }
     toggleBtn && toggleBtn.addEventListener('click', ()=> toggleMobile());
   </script>
+
+ 
+
+  
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
