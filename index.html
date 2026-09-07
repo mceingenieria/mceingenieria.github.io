@@ -84,10 +84,26 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
     }
 
     .brand .name {
-      font-weight: 800;
-      font-size: 20px;
-      color: #ffffff;
-      letter-spacing: 0.6px;
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: 0.8px;
+
+        background: linear-gradient(
+         90deg,
+         #ffd27a,
+         #ffb347,
+         #f5c96a
+        );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      display: inline-block;
+
+      text-shadow:
+       1px 1px 2px rgba(0, 0, 0, 0.18),
+      -1px -1px 1px rgba(255, 255, 255, 0.18);
     }
 
     nav.desktop {
@@ -170,19 +186,33 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
     ========================== */
 
     .hero {
-      margin-top: 96px;
-      height: calc(100vh - 96px);
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+
       background-image: url('portada.jpg');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      animation: movimientoPortada 12s ease-in-out infinite alternate;
+}
 
-      text-align: center;
-      padding: 30px;
-    }
+@keyframes movimientoPortada {
+
+  0% {
+    background-position: 48% center;
+  }
+
+  50% {
+    background-position: 52% center;
+  }
+
+  100% {
+    background-position: 48% center;
+  }
+
+}
 
     .hero-box {
       background: rgba(255,255,255,0.38);
@@ -463,8 +493,9 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
       display: flex;
       justify-content: center;
       align-items: stretch;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 24px;
+      width: 100%;
     }
 
     .svc {
@@ -492,9 +523,9 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
 
     .svc img {
       width: 100%;
-      height: 200px;
+      height: 240px;
       object-fit: cover;
-      background: #eee;
+      object-position: center;
       display: block;
     }
 
@@ -529,6 +560,407 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
       }
 
     }
+
+
+
+
+/* =========================
+   TARJETA INGENIERÍA MECÁNICA
+========================== */
+
+.svc-mecanica {
+  width: 30%;
+  min-width: 0;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+/* Imagen */
+
+.mecanica-carrusel {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+ 
+}
+
+
+
+.mecanica-carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Texto */
+ 
+.svc-mecanica .svc-body {
+  padding: 18px;
+}
+
+.svc-mecanica h4 {
+  color: #0b3a80;
+  margin-bottom: 8px;
+}
+
+/* Celular */
+
+@media (max-width: 1100px) {
+  .svc-mecanica {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .svc-mecanica {
+    width: 100%;
+  }
+
+  .mecanica-carrusel {
+    height: 200px;
+  }
+}
+
+/* =========================
+   TARJETA INGENIERÍA CIVIL
+========================== */
+
+.svc-civil {
+  width: 30%;
+  min-width: 0;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.civil-carrusel {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.civil-carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.svc-civil .svc-body {
+  padding: 18px;
+}
+
+.svc-civil h4 {
+  color: #0b3a80;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1100px) {
+
+  .svc-civil {
+    width: 45%;
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .svc-civil {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .civil-carrusel {
+    height: 200px;
+  }
+
+}
+
+/* =========================
+   TARJETA INGENIERÍA ELÉCTRICA
+========================== */
+
+.svc-electrica {
+  width: 30%;
+  min-width: 0;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.electrica-carrusel {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.electrica-carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.svc-electrica .svc-body {
+  padding: 18px;
+}
+
+.svc-electrica h4 {
+  color: #0b3a80;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1100px) {
+
+  .svc-electrica {
+    width: 45%;
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .svc-electrica {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .electrica-carrusel {
+    height: 200px;
+  }
+
+}
+
+/* =========================
+   INDICACIÓN DE IMÁGENES INTERACTIVAS
+========================== */
+
+.imagen-interactiva {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 5;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+/* Cuando el usuario pasa el cursor,
+   la indicación desaparece */
+.svc:hover .imagen-interactiva {
+  opacity: 0;
+}
+
+
+
+
+    /* =========================
+   PROYECTOS REALIZADOS
+========================== */
+
+#proyectos {
+  background: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 22px rgba(9,30,66,0.06);
+
+  display: flex;
+  flex-direction: column;
+
+  width: 30%;
+  min-width: 300px;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(9,30,66,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #eee;
+  display: block;
+}
+
+.project-body {
+  padding: 18px;
+  flex: 1;
+}
+
+.project-card h4 {
+  color: #0b3a80;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: #444;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1100px) {
+  .project-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .project-card {
+    width: 100%;
+  }
+}
+
+/* =========================
+   TARJETA INTRODUCTORIA PROYECTOS
+========================== */
+
+.proyectos-intro {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  padding: 16px 24px;
+
+  background: #ffffff;
+  border: 1px solid #e1e7ef;
+  border-left: 4px solid #002b80;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(0,43,128,0.08);
+
+  text-align: center;
+
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.proyectos-intro:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,43,128,0.12);
+}
+
+.proyectos-intro p {
+  margin: 0;
+  color: #555;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   GALERÍA DE VIDEOS
+========================== */
+
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:25px;
+}
+
+.video-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid #e4eaf2;
+  box-shadow:0 10px 25px rgba(0,43,128,.08);
+  transition:all .35s ease;
+}
+
+.video-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,43,128,.15);
+}
+
+.video-card video{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.video-info{
+  padding:10px;
+}
+
+.video-badge{
+  display:inline-block;
+  background:#002b80;
+  color:#fff;
+  font-size:11px;
+  font-weight:600;
+  padding:6px 12px;
+  border-radius:50px;
+  margin-bottom:10px;
+}
+
+.video-info h4{
+  color:#002b80;
+  margin-bottom:5px;
+  font-size:14px;
+}
+
+.video-info p{
+  font-size:.9rem;
+  color:#555;
+  line-height:1.5;
+}
+
+@media(max-width:900px){
+
+  .video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    
+  }
+
+}
+
+@media(max-width:700px){
+
+  .video-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
 
 
 /* =========================
@@ -682,6 +1114,7 @@ footer .line2 {
   line-height: 1.5;
 }
 
+
 /* =========================
    VISTA INDIVIDUAL DE SECCIONES
 ========================= */
@@ -689,6 +1122,7 @@ footer .line2 {
 body.vista-mision #inicio,
 body.vista-mision #quienes,
 body.vista-mision #servicios,
+body.vista-mision #proyectos,
 body.vista-mision #contacto {
   display: none;
 }
@@ -707,6 +1141,7 @@ body.vista-mision footer {
 body.vista-quienes #inicio,
 body.vista-quienes #mision,
 body.vista-quienes #servicios,
+body.vista-quienes #proyectos,
 body.vista-quienes #contacto {
   display: none;
 }
@@ -725,6 +1160,7 @@ body.vista-quienes footer {
 body.vista-servicios #inicio,
 body.vista-servicios #quienes,
 body.vista-servicios #mision,
+body.vista-servicios #proyectos,
 body.vista-servicios #contacto {
   display: none;
 }
@@ -740,10 +1176,32 @@ body.vista-servicios footer {
   display: block;
 }
 
+
+body.vista-proyectos #inicio,
+body.vista-proyectos #quienes,
+body.vista-proyectos #mision,
+body.vista-proyectos #servicios,
+body.vista-proyectos #contacto {
+  display: none;
+}
+
+body.vista-proyectos #proyectos {
+  display: block;
+  min-height: calc(100vh - 150px);
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+body.vista-proyectos footer {
+  display: block;
+}
+
+
 body.vista-contacto #inicio,
 body.vista-contacto #quienes,
 body.vista-contacto #mision,
-body.vista-contacto #servicios {
+body.vista-contacto #servicios, 
+body.vista-contacto #proyectos {
   display: none;
 }
 
@@ -763,6 +1221,7 @@ body.vista-contacto footer {
 body.vista-mision,
 body.vista-quienes,
 body.vista-servicios,
+body.vista-proyectos,
 body.vista-contacto {
   min-height: 100vh;
   display: flex;
@@ -772,6 +1231,7 @@ body.vista-contacto {
 body.vista-mision main,
 body.vista-quienes main,
 body.vista-servicios main,
+body.vista-proyectos main,
 body.vista-contacto main {
   flex: 1;
 }
@@ -779,52 +1239,14 @@ body.vista-contacto main {
 body.vista-mision footer,
 body.vista-quienes footer,
 body.vista-servicios footer,
+body.vista-proyectos footer,
 body.vista-contacto footer {
   margin-top: auto !important;
 }
 
-.footer-social {
-  margin-top: 14px;
-}
 
-/* =========================
-   INSTAGRAM
-========================= */
 
-.footer-social {
-  margin-top: 16px;
-}
 
-.footer-social a {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-  color: #fff;
-
-  padding: 10px 18px;
-  border-radius: 30px;
-
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.95rem;
-
-  box-shadow: 0 6px 15px rgba(0,0,0,0.20);
-
-  transition: all .25s ease;
-}
-
-.footer-social a:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.30);
-}
-
-.footer-social .instagram-icon {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
 
 .comilla{
     font-size: 60px;
@@ -847,6 +1269,27 @@ body.vista-contacto footer {
   border-radius:10px;
 }
 
+/* =========================
+   MOVIMIENTO SUAVE PORTADA
+========================= */
+
+@keyframes movimientoPortada {
+
+  0% {
+    transform: scale(1.02) translateX(0);
+  }
+
+  50% {
+    transform: scale(1.06) translateX(-8px);
+  }
+
+  100% {
+    transform: scale(1.02) translateX(0);
+  }
+
+}
+
+
 
   </style>
 
@@ -855,11 +1298,13 @@ body.vista-contacto footer {
 
 <script>
 
+
 function mostrarSeccion(seccion) {
 
   document.body.classList.remove("vista-mision");
   document.body.classList.remove("vista-quienes");
   document.body.classList.remove("vista-servicios");
+  document.body.classList.remove("vista-proyectos");
   document.body.classList.remove("vista-contacto");
 
   if (seccion === "mision") {
@@ -874,6 +1319,10 @@ function mostrarSeccion(seccion) {
     document.body.classList.add("vista-servicios");
   }
 
+  if (seccion === "proyectos") {
+    document.body.classList.add("vista-proyectos");
+  }
+
   if (seccion === "contacto") {
     document.body.classList.add("vista-contacto");
   }
@@ -882,12 +1331,28 @@ function mostrarSeccion(seccion) {
     top: 0,
     behavior: "smooth"
   });
-
 }
 
-</script>
+
+window.addEventListener("load", function () {
+
+  const seccion = window.location.hash.replace("#", "");
+
+  if (
+    seccion === "inicio" ||
+    seccion === "quienes" ||
+    seccion === "mision" ||
+    seccion === "servicios" ||
+    seccion === "proyectos" ||
+    seccion === "contacto"
+  ) {
+    mostrarSeccion(seccion);
+  }
+
+});
 
 </script>
+
 
 <body>
 
@@ -929,8 +1394,12 @@ function mostrarSeccion(seccion) {
            Servicios
         </a>
 
+        <a href="#" onclick="mostrarSeccion('proyectos'); return false;">
+           Proyectos realizados
+        </a>
+
         <a href="galeria.html">
-          Galería de Proyectos
+            Galeria
         </a>
 
         <a href="#" onclick="mostrarSeccion('contacto'); return false;">
@@ -977,9 +1446,12 @@ function mostrarSeccion(seccion) {
         Servicios
       </a>
 
-      <a href="galeria.html"
-        onclick="toggleMobile(false)">
-        Galería de Proyectos
+      <a href="#" onclick="mostrarSeccion('proyectos'); toggleMobile(false); return false;">
+        Proyectos Realizados
+      </a>
+
+      <a href="galeria.html">
+        Galeria
       </a>
 
       <a href="#" onclick="mostrarSeccion('contacto'); toggleMobile(false); return false;">
@@ -1004,18 +1476,7 @@ function mostrarSeccion(seccion) {
 
     <section id="inicio" class="hero">
 
-      <div class="hero-box">
-
-        <h1>
-          Construyendo el futuro a través de proyectos de ingeniería Mecánica, Civil y Eléctrica.
-        </h1>
-
-        <h2>
-          Impulsamos el desarrollo y la sostenibilidad mediante la energía, el medio ambiente y los procesos industriales.
-        </h2>
-
-      </div>
-
+      
     </section>
 
 
@@ -1281,75 +1742,210 @@ function mostrarSeccion(seccion) {
       <div class="services-grid">
 
 
-        <article class="svc">
+      <article class="svc svc-mecanica">
 
-          <img
-            src="mecanica.jpeg"
-            alt="Ingeniería mecánica">
+  <div class="mecanica-carrusel">
+    <img
+      id="imagenMecanica"
+      src="mecanica.jpeg"
+      alt="Ingeniería mecánica">
+  
 
-          <div class="svc-body">
+   <div class="imagen-interactiva">
+    ↔ Pasa el cursor para ver más imágenes
+  </div>
+  </div>
 
-            <h4>
-              Ingeniería mecánica
-            </h4>
+  <div class="svc-body">
 
-            <p>
-              Diseño, montaje y mantenimiento de estructuras metálicas,
-              tuberías industriales y componentes mecánicos de alta precisión.
-            </p>
+    <h4>Ingeniería mecánica</h4>
 
-          </div>
+    <p>
+      Diseño, montaje y mantenimiento de estructuras metálicas,
+      tuberías industriales y componentes mecánicos de alta precisión.
+    </p>
 
-        </article>
+  </div>
 
-
-        <article class="svc">
-
-          <img
-            src="civil.jpg"
-            alt="Ingeniería civil">
-
-          <div class="svc-body">
-
-            <h4>
-              Ingeniería civil
-            </h4>
-
-            <p>
-              Construcción y mantenimiento de edificaciones, obras civiles,
-              cimentaciones y estructuras con altos estándares de calidad.
-            </p>
-
-          </div>
-
-        </article>
+</article>
 
 
-        <article class="svc">
+ <article class="svc svc-civil">
 
-          <img
-            src="electrica.jpg"
-            alt="Ingeniería eléctrica">
+  <div class="civil-carrusel">
+    <img
+      id="imagenCivil"
+      src="civil.jpg"
+      alt="Ingeniería civil">
 
-          <div class="svc-body">
+  <div class="imagen-interactiva">
+    ↔ Pasa el cursor para ver más imágenes
+  </div>  
 
-            <h4>
-              Ingeniería eléctrica
-            </h4>
+  </div>
 
-            <p>
-              Instalaciones eléctricas industriales y residenciales,
-              automatización, mantenimiento y eficiencia energética.
-            </p>
+  <div class="svc-body">
 
-          </div>
+    <h4>
+      Ingeniería civil
+    </h4>
 
-        </article>
+    <p>
+      Construcción y mantenimiento de edificaciones, obras civiles,
+      cimentaciones y estructuras con altos estándares de calidad.
+    </p>
 
+  </div>
+
+</article>       
+
+
+ <article class="svc svc-electrica">
+
+  <div class="electrica-carrusel">
+
+    <img
+      id="imagenElectrica"
+      src="electrica.jpg"
+      alt="Ingeniería eléctrica">
+
+    <div class="imagen-interactiva">
+    ↔ Pasa el cursor para ver más imágenes
+  </div>    
+
+  </div>
+
+  <div class="svc-body">
+
+    <h4>Ingeniería eléctrica</h4>
+
+    <p>
+      Instalaciones eléctricas industriales y residenciales,
+      automatización, mantenimiento y eficiencia energética.
+    </p>
+
+  </div>
+
+</article>       
 
       </div>
 
     </section>
+
+ <!-- PROYECTOS REALIZADOS -->
+
+<section id="proyectos" class="section">
+
+  <h2 style="display:block !important; visibility:visible !important; opacity:1 !important; color:#002b80 !important; text-align:center !important; font-size:1.9rem !important; margin:0 0 30px 0 !important; line-height:1.2 !important;">
+    Proyectos Realizados
+  </h2>
+
+  <div class="titulo-linea"></div>
+
+  <div class="proyectos-intro">
+    <p>
+      Conoce algunos de los proyectos más destacados desarrollados por
+      <strong>MCE Ingeniería</strong>, donde combinamos experiencia,
+      calidad y compromiso para brindar soluciones de ingeniería.
+    </p>
+  </div>
+
+
+  <div class="video-grid">
+
+   <div class="video-card">
+
+    <video controls preload="metadata" width="100%">
+        <source src="proyecto-01.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+    </video>
+
+    <div class="video-info">
+        <h4>Obras y Montajes Industriales</h4>
+    </div>
+
+</div>
+
+    <div class="video-card">
+      <video controls preload="metadata" width="100%">
+        <source src="proyecto-02.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-info">
+       
+        <h4>Infraestructura y Construcción</h4>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls preload="metadata" width="100%">
+        <source src="proyecto-03.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-info">
+        
+        <h4>Ingeniería Civil Aplicada</h4>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls preload="metadata" width="100%">
+        <source src="proyecto-04.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-info">
+        
+        <h4>Montajes Especializados</h4>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls preload="metadata" width="100%">
+        <source src="proyecto-05.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-info">
+        
+        <h4>Proyectos Integrales</h4>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls preload="metadata" width="100%">
+        <source src="proyecto-06.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-info">
+        
+        <h4>Construcción y Adecuaciones</h4>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls preload="metadata" width="100%">
+        <source src="proyecto-07.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-info">
+        
+        <h4>Ingeniería para la Industria</h4>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls preload="metadata" width="100%">
+        <source src="proyecto-08.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-info">
+        
+        <h4>Resultados que Construyen Futuro</h4>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
     <!-- CONTACTO -->
     <section id="contacto" class="section">
@@ -1402,6 +1998,162 @@ function mostrarSeccion(seccion) {
         </form>
       </div>
 
+
+    <script>
+
+
+
+const imagenesMecanica = [
+  "mecanica.jpeg",
+  "ingmec1.jpeg",
+  "ingmec2.jpeg",
+  "ingmec3.jpeg",
+  "ingmec4.jpeg",
+  "ingmec5.jpeg",
+  "ingmec6.jpeg",
+  "ingmec7.jpeg",
+  "ingmec8.jpeg",
+  "ingmec9.jpeg",
+  "ingmec10.jpeg",
+  "ingmec11.jpeg",
+  "ingmec12.jpeg",
+  "ingmec13.jpeg",
+  "ingmec14.jpeg",
+  "ingmec15.jpeg",
+  "ingmec16.jpeg",
+  "ingmec17.jpeg",
+  "ingmec18.png",
+  "ingmec19.jpeg",
+  "ingmec20.jpeg",
+  "ingmec21.jpeg",
+  "ingmec22.jpeg"
+];
+
+let indiceMecanica = 0;
+let intervaloMecanica = null;
+
+function iniciarCarruselMecanica() {
+
+  const imagen = document.getElementById("imagenMecanica");
+
+  if (!imagen) return;
+
+  /* Evita crear varios intervalos */
+  if (intervaloMecanica) return;
+
+  intervaloMecanica = setInterval(function() {
+
+    indiceMecanica++;
+
+    if (indiceMecanica >= imagenesMecanica.length) {
+      indiceMecanica = 0;
+    }
+
+    imagen.src = imagenesMecanica[indiceMecanica];
+
+  }, 1800);
+}
+
+function detenerCarruselMecanica() {
+
+  clearInterval(intervaloMecanica);
+  intervaloMecanica = null;
+
+}
+
+const tarjetaMecanica =
+  document.querySelector(".svc-mecanica");
+
+
+if (tarjetaMecanica) {
+
+  tarjetaMecanica.addEventListener(
+    "mouseenter",
+    iniciarCarruselMecanica
+  );
+
+  tarjetaMecanica.addEventListener(
+    "mouseleave",
+    detenerCarruselMecanica
+  );
+
+}
+
+
+
+</script> 
+
+
+</script>
+
+
+<script>
+
+/* =========================
+   CARRUSEL INGENIERÍA CIVIL
+========================== */
+
+const imagenesCivil = [
+  "civil.jpg",
+  "ingcivil1.jpeg",
+  "ingcivil2.jpeg",
+  "ingcivil3.jpeg",
+  "ingcivil4.jpeg"
+];
+
+let indiceCivil = 0;
+let intervaloCivil = null;
+
+function iniciarCarruselCivil() {
+
+  const imagen = document.getElementById("imagenCivil");
+
+  if (!imagen) return;
+
+  if (intervaloCivil) return;
+
+  intervaloCivil = setInterval(function() {
+
+    indiceCivil++;
+
+    if (indiceCivil >= imagenesCivil.length) {
+      indiceCivil = 0;
+    }
+
+    imagen.src = imagenesCivil[indiceCivil];
+
+  }, 1800);
+
+}
+
+function detenerCarruselCivil() {
+
+  clearInterval(intervaloCivil);
+  intervaloCivil = null;
+
+}
+
+const tarjetaCivil =
+  document.querySelector(".svc-civil");
+
+if (tarjetaCivil) {
+
+  tarjetaCivil.addEventListener(
+    "mouseenter",
+    iniciarCarruselCivil
+  );
+
+  tarjetaCivil.addEventListener(
+    "mouseleave",
+    detenerCarruselCivil
+  );
+
+}
+
+</script>
+
+
+
       <script>
         const form = document.getElementById("contactForm");
         const successMsg = document.getElementById("successMsg");
@@ -1433,6 +2185,73 @@ function mostrarSeccion(seccion) {
         });
       </script>
 
+     <script>
+
+/* =========================
+   CARRUSEL INGENIERÍA ELÉCTRICA
+========================== */
+
+const imagenesElectrica = [
+  "electrica.jpg",
+  "ingelec1.jpeg",
+  "ingelec2.jpeg",
+  "ingelec3.jpeg"
+];
+
+let indiceElectrica = 0;
+let intervaloElectrica = null;
+
+function iniciarCarruselElectrica() {
+
+  const imagen =
+    document.getElementById("imagenElectrica");
+
+  if (!imagen) return;
+
+  if (intervaloElectrica) return;
+
+  intervaloElectrica = setInterval(function() {
+
+    indiceElectrica++;
+
+    if (indiceElectrica >= imagenesElectrica.length) {
+      indiceElectrica = 0;
+    }
+
+    imagen.src = imagenesElectrica[indiceElectrica];
+
+  }, 1800);
+
+}
+
+function detenerCarruselElectrica() {
+
+  clearInterval(intervaloElectrica);
+  intervaloElectrica = null;
+
+}
+
+const tarjetaElectrica =
+  document.querySelector(".svc-electrica");
+
+if (tarjetaElectrica) {
+
+  tarjetaElectrica.addEventListener(
+    "mouseenter",
+    iniciarCarruselElectrica
+  );
+
+  tarjetaElectrica.addEventListener(
+    "mouseleave",
+    detenerCarruselElectrica
+  );
+
+}
+
+</script>
+
+
+
     </section>
   </main>
       
@@ -1459,23 +2278,7 @@ function mostrarSeccion(seccion) {
       Tel: 3176678311 – 3222800306
     </div>
 
-  <div class="footer-social">
-
-  <a href="https://www.instagram.com/mce.ingenierias/"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Instagram MCE Ingeniería">
-
-    <img
-      class="instagram-icon"
-      src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-      alt="Instagram">
-
-    Síguenos en Instagram
-
-  </a>
-
-</div>  
+  
 
   </div>
 </footer>  
