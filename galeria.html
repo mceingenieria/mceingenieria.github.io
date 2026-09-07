@@ -10,6 +10,7 @@
     body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:#f4f6f8;color:#222;scroll-behavior:smooth}
 
     /* HEADER */
+
     header{
       position:fixed;top:0;left:0;right:0;
       background:#002b80;color:#fff;z-index:1200;
@@ -129,16 +130,33 @@
   border-radius:10px;
 }
 
+@media (max-width: 700px) {
+
+  .footer-line2 {
+    color: #fff !important;
+  }
+
+  .footer-line2 a {
+    color: #fff !important;
+    text-decoration: none;
+  }
+
+}
+
+
   </style>
 </head>
 <body>
+
   <!-- HEADER -->
   <header>
+
     <div class="header-inner">
       <div class="brand">
         <img src="LOGO-MCE.png" alt="Logo MCE">
         <div class="name">MCE INGENIERÍA</div>
       </div>
+
       <nav class="desktop">
         <a href="index.html#inicio">Inicio</a>
         <a href="index.html#quienes">Quiénes Somos</a>
@@ -148,6 +166,45 @@
         <a href="galeria.html">Galería</a>
         <a href="index.html#contacto">Contáctanos</a>
       </nav>
+
+
+    <!-- BOTÓN MENÚ CELULAR -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+
+      <svg viewBox="0 0 24 24" fill="none"
+           stroke="currentColor"
+           stroke-width="2.5"
+           stroke-linecap="round">
+
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+
+      </svg>
+
+    </button>
+
+  </div>
+
+  <!-- MENÚ CELULAR -->
+  <div class="mobile-panel" id="mobilePanel">
+
+    <a href="index.html#inicio">Inicio</a>
+
+    <a href="index.html#quienes">Quiénes Somos</a>
+
+    <a href="index.html#mision">Misión & Visión</a>
+
+    <a href="index.html#servicios">Servicios</a>
+
+    <a href="index.html#proyectos">Proyectos realizados</a>
+
+    <a href="galeria.html">Galería</a>
+
+    <a href="index.html#contacto">Contáctanos</a>
+
+  </div>
+
     </div>
   </header>
 
@@ -220,6 +277,24 @@
 
   
 </footer> 
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobilePanel = document.getElementById("mobilePanel");
+
+  menuToggle.addEventListener("click", function () {
+    mobilePanel.classList.toggle("show");
+  });
+
+  const menuLinks = mobilePanel.querySelectorAll("a");
+
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      mobilePanel.classList.remove("show");
+    });
+  });
+</script>
+
 
   <script>
     const inner = document.getElementById('carouselInner');
