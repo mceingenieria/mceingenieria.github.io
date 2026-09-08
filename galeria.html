@@ -170,18 +170,25 @@
 
     <!-- BOTÓN MENÚ CELULAR -->
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+       
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false">
 
-      <svg viewBox="0 0 24 24" fill="none"
-           stroke="currentColor"
-           stroke-width="2.5"
-           stroke-linecap="round">
+     <svg viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2.5"
+       stroke-linecap="round">
 
-        <line x1="3" y1="6" x2="21" y2="6"/>
-        <line x1="3" y1="12" x2="21" y2="12"/>
-        <line x1="3" y1="18" x2="21" y2="18"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
 
-      </svg>
-
+     </svg>
+      
     </button>
 
   </div>
@@ -205,8 +212,7 @@
 
   </div>
 
-    </div>
-  </header>
+</header>
 
   <!-- GALERÍA -->
   <main>
@@ -278,22 +284,24 @@
   
 </footer> 
 
-<script>
-  const menuToggle = document.getElementById("menuToggle");
-  const mobilePanel = document.getElementById("mobilePanel");
 
-  menuToggle.addEventListener("click", function () {
-    mobilePanel.classList.toggle("show");
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobilePanel = document.getElementById('mobilePanel');
+
+  menuToggle.addEventListener('click', function () {
+    const abierto = mobilePanel.classList.toggle('show');
+    menuToggle.setAttribute('aria-expanded', abierto);
   });
 
-  const menuLinks = mobilePanel.querySelectorAll("a");
-
-  menuLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
-      mobilePanel.classList.remove("show");
+  mobilePanel.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobilePanel.classList.remove('show');
+      menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
 </script>
+
 
 
   <script>
