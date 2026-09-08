@@ -162,50 +162,62 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
+  
+ <!-- HEADER -->
+<header>
 
-    <div class="header-inner">
-      <div class="brand">
-        <img src="LOGO-MCE.png" alt="Logo MCE">
-        <div class="name">MCE INGENIERÍA</div>
-      </div>
+  <div class="header-inner">
 
-      <nav class="desktop">
-        <a href="index.html#inicio">Inicio</a>
-        <a href="index.html#quienes">Quiénes Somos</a>
-        <a href="index.html#mision">Misión & Visión</a>
-        <a href="index.html#servicios">Servicios</a>
-        <a href="index.html#proyectos">Proyectos realizados</a>
-        <a href="galeria.html">Galería</a>
-        <a href="index.html#contacto">Contáctanos</a>
-      </nav>
+    <div class="brand">
+      <img src="LOGO-MCE.png" alt="Logo MCE">
+      <div class="name">MCE INGENIERÍA</div>
+    </div>
+
+    <!-- MENÚ DE COMPUTADOR -->
+    <nav class="desktop">
+
+      <a href="index.html#inicio">Inicio</a>
+
+      <a href="index.html#quienes">Quiénes Somos</a>
+
+      <a href="index.html#mision">Misión & Visión</a>
+
+      <a href="index.html#servicios">Servicios</a>
+
+      <a href="index.html#proyectos">Proyectos realizados</a>
+
+      <a href="galeria.html">Galería</a>
+
+      <a href="index.html#contacto">Contáctanos</a>
+
+    </nav>
 
 
     <!-- BOTÓN MENÚ CELULAR -->
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-       
+    <button
       class="menu-toggle"
       id="menuToggle"
       type="button"
       aria-label="Abrir menú"
       aria-expanded="false">
 
-     <svg viewBox="0 0 24 24"
-       fill="none"
-       stroke="currentColor"
-       stroke-width="2.5"
-       stroke-linecap="round">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round">
 
-      <line x1="3" y1="6" x2="21" y2="6"/>
-      <line x1="3" y1="12" x2="21" y2="12"/>
-      <line x1="3" y1="18" x2="21" y2="18"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
 
-     </svg>
-      
+      </svg>
+
     </button>
 
   </div>
+
 
   <!-- MENÚ CELULAR -->
   <div class="mobile-panel" id="mobilePanel">
@@ -225,6 +237,8 @@
     <a href="index.html#contacto">Contáctanos</a>
 
   </div>
+
+  
 
 </header>
 
@@ -300,46 +314,84 @@
 
 
 <script>
+
+  /* =========================
+     MENÚ CELULAR
+  ========================== */
+
   const menuToggle = document.getElementById('menuToggle');
   const mobilePanel = document.getElementById('mobilePanel');
 
   menuToggle.addEventListener('click', function () {
+
     const abierto = mobilePanel.classList.toggle('show');
+
     menuToggle.setAttribute('aria-expanded', abierto);
+
   });
 
+
+  /* Cerrar menú al seleccionar una opción */
+
   mobilePanel.querySelectorAll('a').forEach(function (link) {
+
     link.addEventListener('click', function () {
+
       mobilePanel.classList.remove('show');
+
       menuToggle.setAttribute('aria-expanded', 'false');
+
     });
+
   });
+
+
+  /* =========================
+     CARRUSEL DE GALERÍA
+  ========================== */
+
+  const inner = document.getElementById('carouselInner');
+  const total = inner.children.length;
+
+  let index = 0;
+
+
+  function moveSlide(n) {
+
+    index = (index + n + total) % total;
+
+    inner.style.transform =
+      `translateX(-${index * 100}%)`;
+
+  }
+
+
+  function jumpToSlide(n) {
+
+    index = n;
+
+    inner.style.transform =
+      `translateX(-${index * 100}%)`;
+
+  }
+
+
+  /* Cambio automático */
+
+  setTimeout(function () {
+
+    setInterval(function () {
+
+      moveSlide(1);
+
+    }, 4000);
+
+  }, 2000);
+
 </script>
 
 
 
-  <script>
-    const inner = document.getElementById('carouselInner');
-    const total = inner.children.length;
-    let index = 0;
-
-    function moveSlide(n){
-      index = (index + n + total) % total;
-      inner.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    function jumpToSlide(n){
-      index = n;
-      inner.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-
-
-    setTimeout(() => {
-      setInterval(() => moveSlide(1), 4000);
-    }, 2000);
-    
-  </script>
 </body>
 </html>
 
